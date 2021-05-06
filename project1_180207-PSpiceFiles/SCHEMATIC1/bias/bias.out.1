@@ -1,0 +1,54 @@
+
+**** 02/07/18 17:47:03 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work_orcad\project1_180207-PSpiceFiles\SCHEMATIC1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\KCCI\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROJECT1_180207
+R_R1         A B  2k TC=0,0 
+R_R2         B A  2k TC=0,0 
+R_R3         N00299 B  500 TC=0,0 
+R_R4         N00299 A  500 TC=0,0 
+R_R7         B A  {RL} TC=0,0 
+R_R8         N03096 AT  500 TC=0,0 
+R_R9         0 AN  500 TC=0,0 
+V_V1         N03096 0 1.5
+I_I1         0 AN DC 3m  
+R_R10         0 AT  {RL} TC=0,0 
+R_R11         0 AN  {RL} TC=0,0 
+V_V2         N00299 0 3
+V_V3         N00299 0 6
+I_I2         0 B DC 2m  
+I_I3         0 A DC 2m  
+.PARAM  rl=1t
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V3. You may break the loop by adding a series resistance
+

@@ -1,0 +1,4 @@
+* source 180208_PROJECT2
+R_RL         0 N00293  1k TC=0,0 
+I_I1         0 N00293 DC 1m  
+.PARAM  r=1

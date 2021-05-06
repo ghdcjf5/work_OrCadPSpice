@@ -1,0 +1,26 @@
+* source BEAD_ANALYSIS
+L_L1         AC N14388  0.17u  
+R_R1         AC N14388  30 TC=0,0 
+R_R2         N14388 0  4m TC=0,0 
+C_C1         AC N14388  0.24p  TC=0,0 
+R_R4         N14759 0  0.69 TC=0,0 
+R_R3         AC N14759  420 TC=0,0 
+L_L2         AC N14759  0.06u  
+C_C2         AC N14759  0.24p  TC=0,0 
+V_V1         AC 0 DC 0Vdc AC 1Vac 
+L_L4         N15846 N15890  0.06u  
+R_R5         N15720 N15744  30 TC=0,0 
+R_R6         N15744 N16930  4m TC=0,0 
+R_R7         N15846 N15890  420 TC=0,0 
+R_R8         N15890 N16942  0.69 TC=0,0 
+C_C3         N15720 N15744  0.24p  TC=0,0 
+L_L3         N15720 N15744  0.17u  
+C_C4         N15846 N15890  0.24p  TC=0,0 
+R_R9         NOISE N15720  50 TC=0,0 
+R_R10         NOISE N15846  50 TC=0,0 
+V_V3         NOISE N16345  
++PULSE 0 1 50n 1n 1n 50n 100n
+V_V5         N16345 0  
++SIN 0 10m 1g 0 0 0
+R_R11         0 N16930  50 TC=0,0 
+R_R12         0 N16942  50 TC=0,0 

@@ -1,0 +1,21 @@
+* source LPF_180404
+R_R1         PUL N14437  1k TC=0,0 
+V_V1         AC 0 DC 0Vdc AC 1Vac 
+C_C1         0 N14437  1u  TC=0,0 
+V_V2         PUL 0  
++PULSE 0 1 0 1u 1u 15m 30m
+C_C2         0 N14437  1n  TC=0,0 
+L_L1         PUL N14917  1H  
+R_R2         0 N14917  1k TC=0,0 
+C_C4         0 N15315  1u  TC=0,0 
+L_L2         N15438 N15315  1u  
+C_C5         0 N15786  1u  TC=0,0 
+L_L3         N16781 N15786  1u  
+R_R3         AC N15438  1 TC=0,0 
+C_C6         0 N16439  1u  TC=0,0 
+L_L4         N16479 N16439  1u  
+R_R4         AC N16479  20 TC=0,0 
+R_R5         PUL N16781  1 TC=0,0 
+L_L5         N17019 N16941  1u  
+R_R6         PUL N17019  20 TC=0,0 
+C_C7         0 N16941  1u  TC=0,0 

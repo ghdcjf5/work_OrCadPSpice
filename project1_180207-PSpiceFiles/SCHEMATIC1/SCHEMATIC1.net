@@ -1,0 +1,19 @@
+* source PROJECT1_180207
+R_R1         A B  {RL} TC=0,0 
+R_R2         A B  2k TC=0,0 
+R_R3         A B  2k TC=0,0 
+R_R4         B N00446  500 TC=0,0 
+R_R5         N00372 A  500 TC=0,0 
+R_R6         N00492 A  1k TC=0,0 
+R_R7         N00496 B  1k TC=0,0 
+R_R8         N00541 N00534  500 TC=0,0 
+R_R9         N00524 0  500 TC=0,0 
+V_V1         N00534 0 1.5
+V_V2         N00372 0 3
+V_V3         N00446 0 6
+I_I1         0 N00492 DC 2m  
+I_I2         0 N00496 DC 2m  
+I_I3         0 N00524 DC 3m  
+R_R10         0 N00541  {RL} TC=0,0 
+R_R11         0 N00524  {RL} TC=0,0 
+.PARAM  rl=1m

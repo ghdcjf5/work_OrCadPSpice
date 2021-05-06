@@ -1,0 +1,51 @@
+
+**** 04/04/18 11:13:55 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\lpf_180404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\KCCI\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LPF_180404
+R_R1         PUL N14437  1k TC=0,0 
+V_V1         AC GND DC 0Vdc AC 1Vac 
+C_C1         GND N14437  1u  TC=0,0 
+V_V2         PUL GND  
++PULSE 0 1 0 1u 1u 15m 30m
+C_C2         GND N14437  1n  TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node PUL is floating
+
+ERROR(ORPSIM-15142): Node N14437 is floating
+
+ERROR(ORPSIM-15142): Node AC is floating
+
+ERROR(ORPSIM-15142): Node GND is floating
+

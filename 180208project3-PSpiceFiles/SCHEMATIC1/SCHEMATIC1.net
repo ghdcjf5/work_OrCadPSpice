@@ -1,0 +1,5 @@
+* source 180208PROJECT3
+V_V1         PUL 0  
++PULSE 0 1 0 1u 1u 15m 30m
+R_R1         PUL N00235  1k TC=0,0 
+C_C1         0 N00235  1u  TC=0,0 

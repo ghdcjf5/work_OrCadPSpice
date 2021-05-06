@@ -1,0 +1,105 @@
+
+**** 02/08/18 09:13:26 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work_orcad\project1_180207-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\KCCI\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROJECT1_180207
+R_R1         A B  {RL} TC=0,0 
+R_R2         A B  2k TC=0,0 
+R_R3         A B  2k TC=0,0 
+R_R4         B N00446  500 TC=0,0 
+R_R5         N00372 A  500 TC=0,0 
+R_R6         N00492 A  1k TC=0,0 
+R_R7         N00496 B  1k TC=0,0 
+R_R8         N00541 N00534  500 TC=0,0 
+R_R9         N00524 0  500 TC=0,0 
+V_V1         N00534 0 1.5
+V_V2         N00372 0 3
+V_V3         N00446 0 6
+I_I1         0 N00492 DC 2m  
+I_I2         0 N00496 DC 2m  
+I_I3         0 N00524 DC 3m  
+R_R10         0 N00541  {RL} TC=0,0 
+R_R11         0 N00524  {RL} TC=0,0 
+.PARAM  rl=1t
+
+**** RESUMING bias.cir ****
+.END
+
+**** 02/08/18 09:13:26 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work_orcad\project1_180207-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)    4.7500  (    B)    6.2500  (N00372)    3.0000 (N00446)    6.0000     
+
+(N00492)    6.7500 (N00496)    8.2500 (N00524)    1.5000 (N00534)    1.5000     
+
+(N00541)    1.5000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.500E-12
+    V_V2         3.500E-03
+    V_V3         5.000E-04
+
+    TOTAL POWER DISSIPATION  -1.35E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/08/18 09:13:26 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work_orcad\project1_180207-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

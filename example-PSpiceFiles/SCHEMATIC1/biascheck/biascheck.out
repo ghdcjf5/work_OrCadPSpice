@@ -1,0 +1,90 @@
+
+**** 02/13/18 17:20:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-biascheck"  [ D:\work_orcad\example-PSpiceFiles\SCHEMATIC1\biascheck.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "biascheck.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\KCCI\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source EXAMPLE
+R_R1         N00189 N00196  2k TC=0,0 
+R_R2         N00196 N00175  1k TC=0,0 
+R_R3         N00189 0  1k TC=0,0 
+R_R4         N00228 N00196  1k TC=0,0 
+R_R5         N00232 N00189  1k TC=0,0 
+V_V1         N00175 0 6
+R_R6         N00232 N00228  1t TC=0,0 
+
+**** RESUMING biascheck.cir ****
+.END
+
+**** 02/13/18 17:20:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-biascheck"  [ D:\work_orcad\example-PSpiceFiles\SCHEMATIC1\biascheck.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00175)    6.0000 (N00189)    1.5000 (N00196)    4.5000 (N00228)    4.5000     
+
+(N00232)    1.5000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.500E-03
+
+    TOTAL POWER DISSIPATION   9.00E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/13/18 17:20:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-biascheck"  [ D:\work_orcad\example-PSpiceFiles\SCHEMATIC1\biascheck.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

@@ -1,0 +1,20 @@
+* source ESD
+R_R1         OUT1 VCC  1k TC=0,0 
+R_R2         N14615 IN  47k TC=0,0 
+Q_Q1         OUT1 N14615 0 Q2N3904
+V_V1         VCC 0 5
+U_DSTM1         STIM(1,1) $G_DPWR 0 IN IO_STM IO_LEVEL=0 
++ 0 0
++ +0.5m 1
++REPEAT FOREVER
++ +0.5m 0
++  +0.5m 1
++ ENDREPEAT
+Q_Q2         OUT2 N15413 0 Q2N3904
+R_R3         OUT2 VCC  1k TC=0,0 
+R_R5         0 N15413  47k TC=0,0 
+R_R4         N15413 IN  47k TC=0,0 
+Q_Q3         N15952 N15920 0 Qmmbt3904tt1
+R_Rd         N16174 VCC  20 TC=0,0 
+R_R7         N15920 IN  10k TC=0,0 
+D_D1         N16174 N15952 upwledxx 

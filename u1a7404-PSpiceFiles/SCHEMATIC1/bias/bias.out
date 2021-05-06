@@ -1,0 +1,386 @@
+
+**** 05/02/18 15:17:40 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\u1a7404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\KCCI\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 3u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source U1A7404
+X_U1A         IN N14473 $G_DPWR $G_DGND 7404 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND IN IO_STM IO_LEVEL=0 
++ 0 0
++ +.5mS 1
++REPEAT FOREVER
++ +.5mS 0
++  +.5mS 1
++ ENDREPEAT
+X_U2A         IN N14582 $G_DPWR $G_DGND 7405 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+V_V1         VDD 0 5
+R_R1         N14582 N15700  3.3k TC=0,0 
+X_U2B         IN N15230 $G_DPWR $G_DGND 7405 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_R2         N15230 VDD  3.3k TC=0,0 
+D_D2         N15687 N15700 D1N4148 
+C_C2         0 N15700  100u  TC=0,0 
+C_C1         N15687 N15230  100u  TC=0,0 
+D_D3         N15687 0 D1N4148 
+R_R3         N16509 VDD  3.3k TC=0,0 
+X_U3B         IN N16509 $G_DPWR $G_DGND 7405 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_R4         N16714 N16946  3.3k TC=0,0 
+X_U3C         IN N16714 $G_DPWR $G_DGND 7405 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+Q_Q1         N16946 N17094 N16953 Q2N3904
+R_R5         0 N16953  1k TC=0,0 
+R_R6         N16946 VDD  47 TC=0,0 
+R_R7         N16509 N17094  1k TC=0,0 
+X_U4B         IN N18441 $G_DPWR $G_DGND 7405 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U4C         IN N18572 $G_DPWR $G_DGND 7405 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_R9         N18572 VDD2  1k TC=0,0 
+V_V2         VDD2 0 12
+R_R10         N18441 VDD2  250k TC=0,0 
+
+**** RESUMING bias.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node N14582
+*
+* Moving X_U2A.U1:OUT1 from analog node N14582 to new digital node N14582$DtoA
+X$N14582_DtoA1
++ N14582$DtoA
++ N14582
++ $G_DPWR
++ $G_DGND
++ DtoA_STD_OC
++       PARAMS: DRVH=   1.0000E+06 DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N15230
+*
+* Moving X_U2B.U1:OUT1 from analog node N15230 to new digital node N15230$DtoA
+X$N15230_DtoA1
++ N15230$DtoA
++ N15230
++ $G_DPWR
++ $G_DGND
++ DtoA_STD_OC
++       PARAMS: DRVH=   1.0000E+06 DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N16509
+*
+* Moving X_U3B.U1:OUT1 from analog node N16509 to new digital node N16509$DtoA
+X$N16509_DtoA1
++ N16509$DtoA
++ N16509
++ $G_DPWR
++ $G_DGND
++ DtoA_STD_OC
++       PARAMS: DRVH=   1.0000E+06 DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N16714
+*
+* Moving X_U3C.U1:OUT1 from analog node N16714 to new digital node N16714$DtoA
+X$N16714_DtoA1
++ N16714$DtoA
++ N16714
++ $G_DPWR
++ $G_DGND
++ DtoA_STD_OC
++       PARAMS: DRVH=   1.0000E+06 DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N18572
+*
+* Moving X_U4C.U1:OUT1 from analog node N18572 to new digital node N18572$DtoA
+X$N18572_DtoA1
++ N18572$DtoA
++ N18572
++ $G_DPWR
++ $G_DGND
++ DtoA_STD_OC
++       PARAMS: DRVH=   1.0000E+06 DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N18441
+*
+* Moving X_U4B.U1:OUT1 from analog node N18441 to new digital node N18441$DtoA
+X$N18441_DtoA1
++ N18441$DtoA
++ N18441
++ $G_DPWR
++ $G_DGND
++ DtoA_STD_OC
++       PARAMS: DRVH=   1.0000E+06 DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$DIGIFPWR 0 DIGIFPWR
+
+
+**** 05/02/18 15:17:40 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\u1a7404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 05/02/18 15:17:40 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\u1a7404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 05/02/18 15:17:40 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\u1a7404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     Digital Input MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DIN74_OC        
+      S0NAME 0               
+       S0TSW    3.500000E-09 
+       S0RLO    7.13         
+       S0RHI  389            
+      S1NAME 1               
+       S1TSW    5.500000E-09 
+       S1RLO  200.000000E+03 
+       S1RHI  200.000000E+03 
+      S2NAME X               
+       S2TSW    3.500000E-09 
+       S2RLO   42.9          
+       S2RHI  116            
+      S3NAME R               
+       S3TSW    3.500000E-09 
+       S3RLO   42.9          
+       S3RHI  116            
+      S4NAME F               
+       S4TSW    3.500000E-09 
+       S4RLO   42.9          
+       S4RHI  116            
+      S5NAME Z               
+       S5TSW    5.500000E-09 
+       S5RLO  200.000000E+03 
+       S5RHI  200.000000E+03 
+
+
+**** 05/02/18 15:17:40 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\u1a7404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_04            D_05            
+      TPLHMN    4.800000E-09   16.000000E-09 
+      TPLHTY   12.000000E-09   40.000000E-09 
+      TPLHMX   22.000000E-09   55.000000E-09 
+      TPHLMN    3.200000E-09    3.200000E-09 
+      TPHLTY    8.000000E-09    8.000000E-09 
+      TPHLMX   15.000000E-09   15.000000E-09 
+
+
+**** 05/02/18 15:17:40 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\u1a7404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_STD          IO_STD_OC       
+        DRVL    0             104             104            
+        DRVH    0              96.4             1.000000E+06 
+       AtoD1                 AtoD_STD        AtoD_STD        
+       AtoD2                 AtoD_STD_NX     AtoD_STD_NX     
+       AtoD3                 AtoD_STD        AtoD_STD        
+       AtoD4                 AtoD_STD_NX     AtoD_STD_NX     
+       DtoA1 DtoA_STM        DtoA_STD        DtoA_STD_OC     
+       DtoA2 DtoA_STM        DtoA_STD        DtoA_STD_OC     
+       DtoA3 DtoA_STM        DtoA_STD        DtoA_STD_OC     
+       DtoA4 DtoA_STM        DtoA_STD        DtoA_STD_OC     
+      TSWHL1                    1.511000E-09    2.747000E-09 
+      TSWHL2                    1.487000E-09    2.732000E-09 
+      TSWHL3                    1.511000E-09    2.747000E-09 
+      TSWHL4                    1.487000E-09    2.732000E-09 
+      TSWLH1                    3.517000E-09    1.589000E-09 
+      TSWLH2                    3.564000E-09    1.615000E-09 
+      TSWLH3                    3.517000E-09    1.589000E-09 
+      TSWLH4                    3.564000E-09    1.615000E-09 
+       TPWRT  100.000000E+03  100.000000E+03  100.000000E+03 
+
+
+**** 05/02/18 15:17:40 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\u1a7404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VDD)    5.0000  ( VDD2)   12.0000  (N14582)    2.4994 (N15230)    4.9201     
+
+(N15687)     .0410 (N15700)    2.4994 (N16509)    4.8355 (N16714)    4.7335     
+
+(N16946)    4.8072 (N16953)    4.1055 (N17094)    4.8089 (N18441)    5.2143     
+
+(N18572)   11.9060 ($G_DGND)    0.0000                   ($G_DPWR)    5.0000    
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+(N14582$DtoA) : Z  (N16509$DtoA) : Z  (      IN) : 0     (N18572$DtoA) : Z      
+
+(N16714$DtoA) : Z  (N15230$DtoA) : Z  (N18441$DtoA) : Z  (  N14473) : 1     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.175E-03
+    V_V2        -1.212E-04
+    X$DIGIFPWR.VDPWR   1.554E-05
+    X$DIGIFPWR.VDGND   1.861E-04
+
+    TOTAL POWER DISSIPATION   2.23E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/02/18 15:17:40 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\u1a7404-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

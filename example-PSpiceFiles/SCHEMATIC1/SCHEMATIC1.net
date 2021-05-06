@@ -1,0 +1,8 @@
+* source EXAMPLE
+R_R1         N00189 N00196  2k TC=0,0 
+R_R2         N00196 N00175  1k TC=0,0 
+R_R3         N00189 0  1k TC=0,0 
+R_R4         N00228 N00196  1k TC=0,0 
+R_R5         N00232 N00189  1k TC=0,0 
+V_V1         N00175 0 6
+R_R6         N00232 N00228  1t TC=0,0 

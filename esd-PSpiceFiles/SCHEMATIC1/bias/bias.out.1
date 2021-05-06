@@ -1,0 +1,58 @@
+
+**** 05/02/18 09:44:39 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\work\work_orcad\esd-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\KCCI\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 3m 0 3u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ESD
+R_R1         OUT1 VCC  1k TC=0,0 
+R_R2         N14615 IN  47k TC=0,0 
+Q_Q1         OUT1 N14615 0 Q2N3904
+V_V1         VCC 0 5
+U_DSTM1         STIM(1,1) $G_DPWR 0 IN IO_STM IO_LEVEL=0 
++ 0 0
++ +0.5m 1
++REPEAT FOREVER
++ +0.5m 0
++  +0.5m 1
++ ENDREPEAT
+Q_Q2         OUT2 N15413 0 Q2N3904
+R_R3         OUT2 VCC  1k TC=0,0 
+R_R5         0 N15413  47k TC=0,0 
+R_R4         N15413 IN  47k TC=0,0 
+Q_Q3         N15952 N15920 0 Q2N3904
+R_R6         N16174 VCC  1k TC=0,0 
+R_R7         N15920 IN  47k TC=0,0 
+D_D1         N16174 N15952 upwledxx 
+
+**** RESUMING bias.cir ****
+.END
+
+ERROR(ORPSIM-15113): Model upwledxx used by D_D1 is undefined
+
